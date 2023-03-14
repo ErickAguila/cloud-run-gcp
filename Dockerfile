@@ -7,5 +7,5 @@ RUN npm run build --prod
 
 FROM nginx:1.13.9-alpine
 COPY --from=build-env /app/dist/test-gcp/ /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 8080
+COPY /nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
