@@ -1,12 +1,7 @@
 FROM node:14-alpine AS build-env
-WORKDIR /source
-
-# Copy the package lock file into the container
+WORKDIR /app
 COPY package*.json ./
-# Run ci only for the production dependencies
-RUN npm ci
-
-# Copy the rest of the files into the container and build
+RUN npm i
 COPY . .
 RUN npm run build --prod
 
