@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docker:build": "sudo docker build -t test-gcp .",
-    "docker:run": "sudo docker run --rm --name test-gcp -dp 80:80 test-gcp"
+    "docker:run": "sudo docker run --rm --name test-gcp -dp 8080:80 test-gcp"
   },
   "private": true,
   "dependencies": {
